@@ -1,8 +1,10 @@
 import React from 'react';
 import logoImg from '../assets/logo.png';
 import gitIcon from '../assets/github icon.svg';
-import { Link } from 'react-router';
+import { Link, NavLink, useLocation } from 'react-router';
+import '../navbar.css';
 const Navbar = () => {
+    const location=useLocation();
     return (
         <div className="navbar bg-base-100 shadow-sm max-w-11/12 mx-auto">
   <div className="navbar-start">
@@ -12,10 +14,10 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
-        <li><a>Home</a></li>
-        <li><a>Apps</a></li>
-        <li><a>Installation</a></li>
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow navSections">
+        <li><NavLink to="/home" className={({isActive})=>(isActive || location.pathname==="/")?"active":""}>Home</NavLink></li>
+      <li><NavLink to="/apps"><a>Apps</a></NavLink></li>
+      <li><NavLink to="/installation"><a>Installation</a></NavLink></li>
       </ul>
     </div>
     <Link to="/"><a className="flex items-center cursor-pointer gap-2 text-xl font-bold ">
@@ -24,10 +26,10 @@ const Navbar = () => {
     </a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Apps</a></li>
-      <li><a>Installation</a></li>
+    <ul className="menu menu-horizontal px-1 navSections">
+      <li><NavLink to="/home" className={({isActive})=>(isActive || location.pathname==="/")?"active":""}><a>Home</a></NavLink></li>
+      <li><NavLink to="/apps"><a>Apps</a></NavLink></li>
+      <li><NavLink to="/installation"><a>Installation</a></NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
