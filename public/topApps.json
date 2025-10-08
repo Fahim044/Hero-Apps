@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://i.ibb.co.com/39jfncdF/demo-app-1.webp",
+    "title": "Zenith Weather Forecast",
+    "companyName": "Aura Labs Inc.",
+    "id": 1,
+    "description": "Zenith provides the most accurate and real-time hyper-local weather information available, offering detailed forecasts up to 15 days in advance. Features include interactive radar maps for tracking precipitation, severe weather alerts, air quality indices, and UV reports. The app is designed with a sleek, intuitive interface that uses dynamic backgrounds to reflect current conditions. Stay ahead of the elements with hourly and daily breakdowns, personalized notifications, and helpful widgets for your home screen. Our goal is to empower you to plan your day, travel, and outdoor activities with confidence and precision, making unpredictable weather manageable.",
+    "size": 55.2,
+    "reviews": 115823,
+    "ratingAvg": 4.6,
+    "downloads": 85.5,
+    "ratings": [
+      { "name": "1 star", "count": 2800 },
+      { "name": "2 star", "count": 4100 },
+      { "name": "3 star", "count": 12900 },
+      { "name": "4 star", "count": 25000 },
+      { "name": "5 star", "count": 71023 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8gsTsMZd/demo-app-2.webp",
+    "title": "PixelPainter Photo Editor",
+    "companyName": "Creative Stream Studios",
+    "id": 2,
+    "description": "Unleash your inner artist with PixelPainter, a powerful and accessible photo and video editing suite. From basic cropping and filtering to advanced layer manipulation and AI-powered object removal, this app has all the tools you need to transform your visual content. Explore thousands of artistic effects, customizable templates, and professional-grade presets. The intuitive touch-based interface makes complex edits simple, while the robust feature set satisfies seasoned professionals. Share your creations directly to social media, collaborate on projects, and join a vibrant community of photographers and designers. Start crafting stunning visuals today—the only limit is your imagination.",
+    "size": 180.7,
+    "reviews": 321590,
+    "ratingAvg": 4.8,
+    "downloads": 210.2,
+    "ratings": [
+      { "name": "1 star", "count": 3100 },
+      { "name": "2 star", "count": 5400 },
+      { "name": "3 star", "count": 18900 },
+      { "name": "4 star", "count": 48100 },
+      { "name": "5 star", "count": 246090 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/jvwLMWMh/demo-app-3.webp",
+    "title": "FlowState: Daily Meditation",
+    "companyName": "Mindful Technologies LLC",
+    "id": 3,
+    "description": "Find your calm and improve your sleep with FlowState, your personal guide to mindfulness and relaxation. The app offers hundreds of guided meditations for stress, anxiety, focus, and sleep, tailored for both beginners and experienced practitioners. Customize your journey with personalized programs, soothing soundscapes, breathing exercises, and 'sleep stories' designed to help you drift off easily. Track your progress, set mindful goals, and integrate with health apps to monitor your mental well-being. FlowState is more than just an app; it's a commitment to a healthier, happier, and more present life. Take a moment for yourself and discover the transformative power of quiet.",
+    "size": 98.4,
+    "reviews": 289050,
+    "ratingAvg": 4.7,
+    "downloads": 150.1,
+    "ratings": [
+      { "name": "1 star", "count": 1900 },
+      { "name": "2 star", "count": 3500 },
+      { "name": "3 star", "count": 15600 },
+      { "name": "4 star", "count": 41000 },
+      { "name": "5 star", "count": 227050 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/DHrfSQW7/demo-app-4.webp",
+    "title": "Chronos Task Manager",
+    "companyName": "Productivity Nexus",
+    "id": 4,
+    "description": "Organize your life and boost your efficiency with Chronos, the smart task and project management application. This all-in-one tool allows you to create detailed to-do lists, set reminders with location-based triggers, manage complex projects with team collaboration, and track your progress with insightful analytics. Utilize the powerful natural language input feature to quickly capture tasks on the go. Synchronize seamlessly across all your devices, ensuring your focus remains clear whether you're at work, home, or on the move. Chronos helps you prioritize effectively, break down big goals, and ultimately achieve more with less stress.",
+    "size": 78.1,
+    "reviews": 89450,
+    "ratingAvg": 4.5,
+    "downloads": 62.8,
+    "ratings": [
+      { "name": "1 star", "count": 1800 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 10100 },
+      { "name": "4 star", "count": 22000 },
+      { "name": "5 star", "count": 52550 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/1JsjyCjZ/demo-app-5.webp",
+    "title": "TerraExplorer Maps & GPS",
+    "companyName": "Global Navigation Systems",
+    "id": 5,
+    "description": "Navigate the world with confidence using TerraExplorer, a comprehensive mapping and navigation app that offers detailed road maps, satellite imagery, and turn-by-turn directions for driving, walking, biking, and public transit. Get real-time traffic updates, explore points of interest, and download offline maps for reliable navigation without an internet connection. The app includes a unique augmented reality feature for local discovery, helping you find restaurants, landmarks, and gas stations with ease. From daily commutes to epic road trips, TerraExplorer provides the essential tools to explore your surroundings, plan the optimal route, and always know where you are going.",
+    "size": 155.0,
+    "reviews": 512700,
+    "ratingAvg": 4.4,
+    "downloads": 350.9,
+    "ratings": [
+      { "name": "1 star", "count": 12000 },
+      { "name": "2 star", "count": 15700 },
+      { "name": "3 star", "count": 45000 },
+      { "name": "4 star", "count": 90000 },
+      { "name": "5 star", "count": 350000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/DDJYm27F/demo-app-6.webp",
+    "title": "Quantum Puzzle Game",
+    "companyName": "Infinite Loop Games",
+    "id": 6,
+    "description": "Quantum is a mind-bending, physics-based puzzle game that challenges your spatial reasoning and logic. Traverse hundreds of intricately designed levels, manipulating light beams, portals, and gravity to solve complex enigmas. The game features stunning, minimalist graphics, an ambient soundtrack, and a challenging difficulty curve that rewards perseverance. With daily challenges, a level editor to create and share your own puzzles, and global leaderboards, Quantum offers endless hours of engaging gameplay. It's the perfect game for players who enjoy a deep, satisfying challenge that truly tests the limits of their intellect and problem-solving skills.",
+    "size": 92.5,
+    "reviews": 195600,
+    "ratingAvg": 4.7,
+    "downloads": 110.4,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 2800 },
+      { "name": "3 star", "count": 14000 },
+      { "name": "4 star", "count": 38000 },
+      { "name": "5 star", "count": 139300 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/39jfncdF/demo-app-1.webp",
+    "title": "Nova News Digest",
+    "companyName": "Chronicle Media Group",
+    "id": 7,
+    "description": "Nova News Digest delivers personalized and unbiased news from thousands of trusted sources worldwide, curated by a blend of intelligent algorithms and experienced human editors. Customize your feed to follow topics, regions, and publications that matter most to you, from global politics and finance to sports and technology. Features include an offline reading mode, 'In-Depth' articles that provide multiple perspectives on key events, and a built-in fact-checker to combat misinformation. Stay informed, save time, and gain a broader understanding of the world with a clean, ad-light experience designed for optimal readability and comprehensive coverage.",
+    "size": 60.9,
+    "reviews": 75900,
+    "ratingAvg": 4.3,
+    "downloads": 55.0,
+    "ratings": [
+      { "name": "1 star", "count": 3500 },
+      { "name": "2 star", "count": 4800 },
+      { "name": "3 star", "count": 11000 },
+      { "name": "4 star", "count": 18000 },
+      { "name": "5 star", "count": 38600 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8gsTsMZd/demo-app-2.webp",
+    "title": "FitTrack Pro",
+    "companyName": "Health & Wellness Dynamics",
+    "id": 8,
+    "description": "Achieve your fitness goals with FitTrack Pro, the ultimate all-in-one health and activity tracker. Monitor your steps, distance, calories burned, and heart rate with incredible accuracy. Choose from over 100 workout types with guided routines, video demonstrations, and personalized training plans tailored to your level and objective. Track your nutrition with an easy-to-use food diary, set water intake goals, and analyze your sleep patterns for better recovery. Connect with friends for friendly challenges, earn badges, and stay motivated with performance insights. FitTrack Pro is your dedicated companion for a healthier lifestyle, providing the data and support you need to succeed.",
+    "size": 120.3,
+    "reviews": 405100,
+    "ratingAvg": 4.8,
+    "downloads": 180.8,
+    "ratings": [
+      { "name": "1 star", "count": 4200 },
+      { "name": "2 star", "count": 6800 },
+      { "name": "3 star", "count": 22000 },
+      { "name": "4 star", "count": 68000 },
+      { "name": "5 star", "count": 304100 }
+    ]
+  }
+]
