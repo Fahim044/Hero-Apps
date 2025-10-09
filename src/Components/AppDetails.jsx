@@ -1,10 +1,15 @@
-import React, { use } from 'react';
-import { useParams } from 'react-router';
+import React, { use, useEffect, useState } from 'react';
+import { useOutletContext, useParams } from 'react-router';
 import downIcon from '../assets/icon-downloads.png';
 import ratingIcon from '../assets/icon-ratings.png';
 import reviewIcon from '../assets/icon-review.png';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { toast } from 'react-toastify';
 const AppDetails = ({appsPromise12}) => {
+    const {install,handleInstall}=useOutletContext();
+    // console.log(install);
+    const [isSelected,setIsSelected]=useState(false);
+
     const allApps=use(appsPromise12);
     // console.log(allApps);
     const {id}=useParams();
@@ -15,6 +20,20 @@ const AppDetails = ({appsPromise12}) => {
     // console.log(singleApp);
     const {image,title,companyName,description,size,reviews,ratingAvg,downloads,ratings}=singleApp;
 
+     useEffect(()=>{
+        const saved=localStorage.getItem(`installed app id: ${singleApp.id}`);
+        if(saved==="true")
+        {
+            setIsSelected(true);
+        }
+    },[singleApp.id]);
+
+    const installFunctions=()=>{
+
+        setIsSelected(true);
+        localStorage.setItem(`installed app id: ${singleApp.id}`,"true");
+        toast("App Successfully Installed");
+    }
     return (
         <div className='max-w-11/12 mx-auto py-3'>
             <div className='flex gap-7 flex-col md:flex-row border-b-1 border-gray-500'>
@@ -40,7 +59,9 @@ const AppDetails = ({appsPromise12}) => {
                             <p>{reviews}</p>
                         </div>
                     </div>
-                    <button className='p-6 bg-green-600 btn text-xl font-bold'>Install ({size} MB)</button>
+    <button disabled={isSelected}  onClick={()=>{handleInstall(singleApp);
+        installFunctions();
+    }} className='p-6 bg-green-600 btn text-xl font-bold'>{isSelected? "Installed":`Install (${size} MB)`}</button>
 
 
                 </div>

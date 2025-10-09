@@ -9,6 +9,13 @@ import AppDetails from "./Components/AppDetails";
 
 const appsPromise12=fetch("/appsData.json").then(res=>res.json());
 const appsPromise8=fetch("/topApps.json").then(res=>res.json());
+
+// const handleInstall=(singleApp,install,setInstall)=>{
+// // console.log(singleApp);
+// const newInstall=[...install,singleApp];
+// setInstall(newInstall);
+// console.log(install);
+// }
 export const router=createBrowserRouter([
     {
         path:"/",
@@ -37,7 +44,7 @@ export const router=createBrowserRouter([
             {
                 path:'/appDetails/:id',
                 element:<Suspense fallback={<div className='flex items-center justify-center'><span className="loading loading-dots loading-xl "></span></div>}>
-                    <AppDetails appsPromise12={appsPromise12}></AppDetails>
+                    <AppDetails appsPromise12={appsPromise12}  ></AppDetails>
                 </Suspense>
             },
             {
