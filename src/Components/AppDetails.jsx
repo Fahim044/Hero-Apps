@@ -21,11 +21,14 @@ const AppDetails = ({appsPromise12}) => {
     const {image,title,companyName,description,size,reviews,ratingAvg,downloads,ratings}=singleApp;
 
      useEffect(()=>{
-        const saved=localStorage.getItem(`installed app id: ${singleApp.id}`);
+       const saved=localStorage.getItem(`installed app id: ${singleApp.id}`);
         if(saved==="true")
         {
             setIsSelected(true);
         }
+        
+  
+
     },[singleApp.id]);
 
     const installFunctions=()=>{
@@ -34,6 +37,24 @@ const AppDetails = ({appsPromise12}) => {
         localStorage.setItem(`installed app id: ${singleApp.id}`,"true");
         toast("App Successfully Installed");
     }
+    // const getStoredApp=()=>{
+    //     const storedAppStr=localStorage.getItem("installationList");
+    //     if(storedAppStr)
+    //     {
+    //         const storedAppData=JSON.parse(storedAppStr);
+    //         return storedAppData;
+    //     }
+    //     else
+    //     {
+    //         return [];
+    //     }
+    // }
+    // const addToStoredDB=(id)=>{
+    //     const storedAppData=getStoredApp();
+    //     storedAppData.push(id);
+    //     const data=JSON.stringify(storedAppData);
+    //     localStorage.setItem("installationList",data);
+    // }
     return (
         <div className='max-w-11/12 mx-auto py-3'>
             <div className='flex gap-7 flex-col md:flex-row border-b-1 border-gray-500'>
@@ -61,6 +82,7 @@ const AppDetails = ({appsPromise12}) => {
                     </div>
     <button disabled={isSelected}  onClick={()=>{handleInstall(singleApp);
         installFunctions();
+        
     }} className='p-6 bg-green-600 btn text-xl font-bold'>{isSelected? "Installed":`Install (${size} MB)`}</button>
 
 
