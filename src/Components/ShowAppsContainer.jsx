@@ -14,7 +14,7 @@ const dispApps=((searchValue===false)?allApps:filterApps);
     return (
         <>
         <div>{(filterApps.length===0)?<AppError></AppError>: ""}</div>
-        <div className='max-w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3'>
+        <div className='max-w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3  '>
            
        {
         

@@ -7,7 +7,7 @@ const ShowApps = ({app}) => {
     // console.log(app);
     return (
        <Link to={`/appDetails/${app.id}`}> 
-        <div className='border max-w-64 p-3.5 rounded-lg'>
+        <div className='border max-w-64 p-3.5 rounded-lg mx-auto'>
         <img src={app.image} alt="" /> 
            <p className='text-lg font-bold h-13'>{app.title}</p>
            <div className='flex justify-between items-center'>
