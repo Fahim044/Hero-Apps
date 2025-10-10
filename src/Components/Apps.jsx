@@ -7,14 +7,19 @@ const Apps = ({appsPromise12}) => {
     const allApps=use(appsPromise12);
     // console.log(allApps);
     const [search,setSearch]=useState('');
+    const [loading,setLoading]=useState(false);
     const handleSearch=(e)=>{
-        e.preventDefault();
+        setLoading(true);
+        // e.preventDefault();
         // console.log(e.target.value);
         const inputValue=e.target.value;
         const searchValue=inputValue.trim().toLowerCase();
         console.log(searchValue);
         setSearch(searchValue);
         // console.log(search);
+        setTimeout(()=>{
+            setLoading(false);
+        },300);
 
     }
     return (
@@ -30,9 +35,16 @@ const Apps = ({appsPromise12}) => {
                     </div>
                 </div>
             </div>
-    <Suspense fallback={<div className='flex items-center justify-center'><span className="loading loading-dots loading-xl "></span></div>}>
+            {
+                loading?(
+                    <div className='flex items-center justify-center'>
+                        <span className='loading loading-dots loading-xl'></span>
+                    </div>
+                ):(<ShowAppsContainer allApps={allApps} searchValue={search}></ShowAppsContainer>)
+            }
+    {/* <Suspense fallback={<div className='flex items-center justify-center'><span className="loading loading-dots loading-xl "></span></div>}>
           <ShowAppsContainer allApps={allApps} searchValue={search}></ShowAppsContainer>
-        </Suspense>
+        </Suspense> */}
         </div>
     );
 };

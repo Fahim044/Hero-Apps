@@ -10,12 +10,7 @@ import AppDetails from "./Components/AppDetails";
 const appsPromise12=fetch("/appsData.json").then(res=>res.json());
 const appsPromise8=fetch("/topApps.json").then(res=>res.json());
 
-// const handleInstall=(singleApp,install,setInstall)=>{
-// // console.log(singleApp);
-// const newInstall=[...install,singleApp];
-// setInstall(newInstall);
-// console.log(install);
-// }
+
 export const router=createBrowserRouter([
     {
         path:"/",
