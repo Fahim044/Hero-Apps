@@ -8,7 +8,6 @@ import { toast } from 'react-toastify';
 const AppDetails = ({appsPromise12}) => {
     const {install,handleInstall}=useOutletContext();
     // console.log(install);
-    const [isSelected,setIsSelected]=useState(false);
 
     const allApps=use(appsPromise12);
     // console.log(allApps);
@@ -19,6 +18,18 @@ const AppDetails = ({appsPromise12}) => {
     const singleApp=allApps.find(app=>app.id===appId)
     // console.log(singleApp);
     const {image,title,companyName,description,size,reviews,ratingAvg,downloads,ratings}=singleApp;
+    const [isSelected,setIsSelected]=useState(false);
+    useEffect(()=>{
+        if(install.find(app=>app.id===singleApp.id))
+        {
+            setIsSelected(true);
+        }
+        else
+        {
+            setIsSelected(false);
+        }
+    },[install,singleApp.id])
+    
 
      useEffect(()=>{
        const saved=localStorage.getItem(`installed app id: ${singleApp.id}`);
@@ -35,7 +46,7 @@ const AppDetails = ({appsPromise12}) => {
 
         setIsSelected(true);
         localStorage.setItem(`installed app id: ${singleApp.id}`,"true");
-        toast("App Successfully Installed");
+        toast.success("App Successfully Installed");
     }
     // const getStoredApp=()=>{
     //     const storedAppStr=localStorage.getItem("installationList");

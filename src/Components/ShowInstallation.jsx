@@ -1,10 +1,10 @@
 import React from 'react';
 import downIcon from '../assets/icon-downloads.png';
 import ratingIcon from '../assets/icon-ratings.png';
-const ShowInstallation = ({app}) => {
-    console.log(app);
+const ShowInstallation = ({app,handleUninstall}) => {
+    // console.log(app);
     return (
-        <div className='flex justify-between items-center shadow-xl'>
+        <div className='flex md:flex-row flex-col justify-between items-center shadow-xl'>
                  <div className='flex gap-2 items-center'>
                     <img className='w-16' src={app.image} alt="" />
                     <div>
@@ -23,7 +23,7 @@ const ShowInstallation = ({app}) => {
 
                     </div>
                  </div>
-                <button className='bg-green-600 text-white p-4 text-xl btn'>Uninstall</button>
+                <button onClick={()=>handleUninstall(app.id)} className='bg-green-600 text-white p-4 text-xl btn'>Uninstall</button>
                </div>
     );
 };

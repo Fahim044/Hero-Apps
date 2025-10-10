@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 import { useOutletContext } from 'react-router';
 import ShowInstallation from './ShowInstallation';
+import { toast } from 'react-toastify';
 
 const Installation = () => {
-    const {install,setInstall}=useOutletContext();
+    const {install,setInstall,setIsSelected}=useOutletContext();
+    const handleUninstall=(id)=>{
+        // console.log(id);
+        const newInstall=install.filter(app=>app.id!==id);
+        setInstall(newInstall);
+// setIsSelected(false);        
+        
+        localStorage.setItem("installationList",JSON.stringify(newInstall));
+        localStorage.removeItem(`installed app id: ${id}`);
+        toast.success("App Successfully Uninstalled");
+    }
     // console.log(install);
     const [sort,setSort]=useState("");
     const handleSort=(type)=>{
         setSort(type);
-        if(type==="High-Low")
+        if(type==="Low-High")
         {
             const sortedHighToLow=[...install].sort((a,b)=>a.downloads-b.downloads);
             setInstall(sortedHighToLow);
         }
-        if(type==="Low-High")
+        if(type==="High-Low")
         {
             const sortedLowToHigh=[...install].sort((a,b)=>b.downloads-a.downloads);
             setInstall(sortedLowToHigh);
@@ -38,7 +49,7 @@ const Installation = () => {
             <div className=' space-y-4'>
 
             {
-                install.map(app=><ShowInstallation key={app.id} app={app}></ShowInstallation>)
+                install.map(app=><ShowInstallation key={app.id} app={app} handleUninstall={handleUninstall}></ShowInstallation>)
             }
                
             </div>

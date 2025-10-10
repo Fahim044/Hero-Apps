@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify';
 const Root = () => {
        
     // const [install,setInstall]=useState([]);
+    
     const [install,setInstall]=useState(()=>{
         const stored=localStorage.getItem("installationList");
 return stored?JSON.parse(stored):[];
@@ -22,7 +23,11 @@ return stored?JSON.parse(stored):[];
         if(!install.find(app=>app.id===singleApp.id)){
         setInstall([...install,singleApp]);
         }
+    // return singleApp;    
     }
+    // console.log(handleInstall());
+    
+    
 
     return (
         <div>
